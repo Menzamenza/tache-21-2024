@@ -1,0 +1,105 @@
+<div class="sidebar" data-background-color="dark">
+    <div class="sidebar-logo">
+      <!-- Logo Header -->
+      <div class="logo-header" data-background-color="dark">
+        <a href="/dash" class="logo">
+          <img
+            src="/assets/img/E-Learning.png"
+            alt="navbar brand"
+            class="navbar-brand w-100 mt-0 mt-lg-5"
+            height="150"
+          />
+        </a>
+        <div class="nav-toggle">
+          <button class="btn btn-toggle toggle-sidebar">
+            <i class="gg-menu-right"></i>
+          </button>
+          <button class="btn btn-toggle sidenav-toggler">
+            <i class="gg-menu-left"></i>
+          </button>
+        </div>
+        <button class="topbar-toggler more">
+          <i class="gg-more-vertical-alt"></i>
+        </button>
+      </div>
+      <!-- End Logo Header -->
+    </div>
+    <div class="sidebar-wrapper scrollbar scrollbar-inner">
+      <div class="sidebar-content">
+        <ul class="nav nav-secondary">
+        
+            
+         
+                <li class="nav-item <%= pages === '/dash' ? 'active' : '' %> mt-5">
+                  <a href="/dash">
+              <i class="fa fa-home"></i>
+
+                    <span class="sub-item">Dashboard</span>
+
+                  </a>
+                </li>
+             
+           
+             
+          <li class="nav-section">
+            <span class="sidebar-mini-icon">
+              <i class="fa fa-ellipsis-h"></i>
+            </span>
+            <h4 class="text-section">Modules</h4>
+          </li>
+         
+          <li class="nav-item <%= pages === '/apprenant' ? 'active' : '' %>">
+            <a href="/apprenant">
+              <i class="fas fa-user"></i>
+              <p>Apprenants</p>
+            </a>
+          </li>
+         
+          <li class="nav-item <%= pages === '/domaine' ? 'active' : '' %>">
+            <a href="/domaine">
+              <i class="fas fa-desktop"></i>
+              <p>Domaines</p>
+            </a>
+          </li>
+          
+          <li class="nav-item <%= pages === '/sousDomaine' ? 'active' : '' %>">
+            <a href="/sousDomaine">
+              <i class="fas fa-desktop"></i>
+              <p>Sous Domaines</p>
+              
+            </a>
+          </li>
+          <li class="nav-item <%= pages === '/cours' ? 'active' : '' %>">
+            <a href="/cours">
+              <i class="fas fa-book"></i>
+              <p>Cours</p>
+              
+            </a>
+          </li>
+          <li class="nav-item <%= pages === '/quizz' ? 'active' : '' %>">
+            <a href="/quizz">
+              <i class="fas fa-question-circle"></i>
+              <p>Quizzes</p>
+              
+            </a>
+          </li>
+          <li class="nav-item <%= pages === '/project' ? 'active' : '' %>">
+            <a href="/project">
+              <i class="fas fa-folder-open"></i>
+              <p>Projects</p>
+              
+            </a>
+          </li>
+          <li class="nav-item <%= pages === '/livraison' ? 'active' : '' %>">
+            <a href="/livraison">
+              <i class="fas fa-paper-plane"></i>
+              <p>Livraisons</p>
+              
+            </a>
+          </li>
+         
+          
+        </ul>
+      </div>
+    </div>
+  </div>

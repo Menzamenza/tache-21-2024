@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../pages/head') %>
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <%- include('../pages/sidebar') %>
+      <!-- End Sidebar -->
+       
+
+      <div class="main-panel">
+        <div class="main-header">
+          <div class="main-header-logo">
+            <!-- Logo Header -->
+            <%- include('../pages/logoheader.ejs')%>
+
+            <!-- End Logo Header -->
+          </div>
+          <!-- Navbar Header -->
+          <%- include('../pages/navbar') %>
+          <!-- End Navbar -->
+        </div>
+
+        <div class="container">
+          <div class="page-inner">
+            <div
+              class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4"
+            >
+              <div>
+                <h3 class="fw-bold mb-3">Formulaire d'ajout</h3>
+                <h6 class="op-7 mb-2">Cours</h6>
+              </div>
+              <div class="ms-md-auto py-2 py-md-0">
+                <a href="/cours" class="btn btn-primary btn-round"
+                  >Lister cours</a
+                >
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-title">Formulaire Ajout</div>
+                  </div>
+                 
+                  <div class="card-body">
+                    <div class="row">
+                      <form action="/cours/submitModule" method="POST" class="col-md-12 col-lg-12">
+                        <div class="form-group">
+                          <label for="cours">cours</label>
+                          <input
+                          name="cours"
+                            type="text"
+                            class="form-control"
+                            id="cours"
+                            required
+                            placeholder="ex: HTML/CSS"
+                          />
+                          
+                          
+                        </div>
+                       
+                        <div class="form-group">
+                          <label for="exampleFormControlSelect1"
+                            >Sous domaine</label
+                          >
+                          <select
+                            class="form-select"
+                            id="exampleFormControlSelect1"
+                            name="sousdomaineId"
+                            required
+                          >
+                          <option value="" disabled selected>Choisissez un sous domaine</option>
+                          <% sousdomaines.forEach(sousdomaine=> { %>
+                           
+                            <option value="<%- sousdomaine._id %>"><%- sousdomaine.sousdomaine %></option>
+                          <% }) %>
+                         
+                          </select>
+                          </div>
+                          <div class="form-group">
+                            <label for="duree">Duree</label>
+                            <input class="form-control" name="duree" id="duree" >
+                            
+                          </div>
+                        <div class="form-group">
+                          <label for="description">Description</label>
+                          <textarea class="form-control" name="description" id="description" rows="5">
+                          </textarea>
+                        </div>
+                        
+                        <div class="card-action">
+                          <button class="btn btn-success" type="submit" onclick="showNotification(event)" >Ajouter</button>
+                          <button class="btn btn-danger" type="reset">Annuler</button>
+                        </div>
+                      </form>
+                     
+                       
+
+                     
+                      
+                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <%- include('../pages/footer') %>
+    </div>
+    <%- include('../pages/js') %>
+  </body>
+</html>
